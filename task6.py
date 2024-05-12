@@ -4,19 +4,15 @@ def createCombination(i):
         C.append('?')
 
     return C
-def getSubset(C, printResult = True):
-    if printResult:
-        print(f"{C}")
-    return C
 def makeCombination(i, b, k, n, C, R, printResult = True):
     for x in range(b, n - k + i + 1):
         Cx = C.copy()
         Cx[i - 1] = x
         if i == k:
             if printResult:
-                getSubset(Cx)
+                print(f"{Cx}")
             else:
-                R.append(getSubset(Cx, printResult))
+                R.append(Cx)
         else:
             makeCombination(i + 1, x + 1, k, n, Cx, R, printResult)
 
