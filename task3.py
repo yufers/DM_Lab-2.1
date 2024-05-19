@@ -5,7 +5,7 @@ import task1
 if __name__ == "__main__":
     x = []
     y = []
-    for i in range(1, 26):
+    for i in range(1, 22):
         startTime = time.time_ns() // 1000000
         D = task1.createSubset(i)
         R = []
@@ -18,8 +18,8 @@ if __name__ == "__main__":
 
     plt.figure(figsize=(8, 6))
     plt.plot(y, x, color = 'b')
-    plt.xlabel('мощность')
-    plt.ylabel('время')
+    plt.xlabel('Мощность множества, N')
+    plt.ylabel('время выполнения, t (сек)')
     plt.title('График зависимости времени выполнения от мощности множества')
     plt.grid(True)
     plt.legend()

@@ -13,7 +13,7 @@ if __name__ == "__main__":
         task8.makePermutation(1, i, M, P, R, printResult = False)
         endTime = time.time_ns() // 1000000
         duration = (endTime - startTime)
-        x.append(len(R))
+        x.append(duration / 1000)
         y.append(i)
         print(f'{i} = {len(R)} : {duration}')
 
@@ -21,7 +21,7 @@ if __name__ == "__main__":
     plt.plot(y, x, color = 'b')
     plt.xlabel('Мощность множества, N')
     plt.ylabel('время выполнения, t (сек)')
-    plt.title('график зависимости количества всех перестановок от мощности множества')
+    plt.title('график зависимости времени выполнения алгоритма мощности множества')
     plt.grid(True)
     plt.legend()
     plt.show()

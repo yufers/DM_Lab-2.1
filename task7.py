@@ -10,11 +10,13 @@ if __name__ == "__main__":
         x = []
         y = []
         l.append(f'n = {n}')
-        for k in range(1, n+1):
+        for k in range(0, n+1):
             startTime = time.time_ns() // 1000000
             C = task6.createCombination(k)
             R = []
-            task6.makeCombination(1,1, k, n, C, R, printResult = False)
+            if (k != 0):
+                task6.makeCombination(1,1, k, n, C, R, printResult = False)
+
             endTime = time.time_ns() // 1000000
             duration = (endTime - startTime)
             x.append(len(R))
